@@ -16,10 +16,11 @@ body {
 
 .event {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 20px;
     position: relative;
+    z-index: 1;
 }
 
 .polaroid {
@@ -27,9 +28,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
     border-radius: 10px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
-    width: 200px;
-    height: 300px;
     position: relative;
     z-index: 1;
 }
@@ -41,29 +42,19 @@ body {
 }
 
 .description {
-    background-color: white;
-    padding: 20px;
-    margin-left: 20px;
-    max-width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Marker Felt', cursive;
+    font-size: 16px;
+    line-height: 1.5;
     z-index: 2;
 }
 
-.handwritten {
-    font-family: 'Marker Felt', cursive;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.description h2 {
-    font-size: 24px;
-    margin: 0;
-}
-
 /* Adjust the positioning to create the overlapping effect */
-.event:nth-child(even) {
-    transform: translateY(-50px);
+.event:nth-child(even) .polaroid {
+    transform: translateY(-10px);
 }
-
