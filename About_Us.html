@@ -3,67 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Timeline</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        .timeline {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px auto;
-            max-width: 750px; /* Adjust this value to fit your content */
-        }
-
-        .timeline li {
-            display: flex;
-            margin-bottom: 20px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .timeline img {
-            max-width: 750px; /* Adjust the image size as needed */
-            margin-right: 20px;
-            border: 2px solid #333;
-            border-radius: 5px;
-        }
-
-        .timeline p {
-            text-align: center;
-        }
-    </style>
+    <title>Scrolling Polaroid Timeline</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <ul class="timeline">
-        <li>
-            <img src="1stphoto.jpg" alt="Image 1">
-            <p>Our first photo together. We initially met on Bumble and had our first date on 4/20/2019</p>
-        </li>
-        <li>
-            <img src="Wedding_Website/dolphins.JPG" alt="Image 2">
-            <p>With Ashley being in the marine science field, Ricardo learned how to swim better </p>
-        </li>
-        <li>
-            <img src="Wedding_Website/miami.JPG" alt="Image 3">
-            <p>Sometimes we do exciting Miami things</p>
-        </li>
-        <li>
-            <img src="iquitos.JPG" alt="Image 4">
-            <p>Our first vacation. We went to Peru for a  friend of Ricardo and stopped in Iquitos...</p>
-        </li>
-         <li>
-            <img src="macchu.JPG" alt="Image 5">
-            <p>... As well as Macchu Picchu</p>
-        </li>
-        <li>
-            <img src="engaged.jpg" alt="Image 6">
-            <p> On 4/20/2023 we got engaged :) </p>
-        </li>
-        <!-- Add more items as needed -->
-    </ul>
+    <div class="timeline">
+        <div class="event">
+            <div class="polaroid">
+                <img src="1stphoto.jpg" alt="Image 1">
+            </div>
+            <div class="description">
+                <h2>Event 1</h2>
+                <p>This is our first photo together. <br>We initially met on Bumble and had our first date on April 20, 2019. <br> We went on bar crawl we created ourselves in Wynwood, Miami to find a special alcohol</p>
+            </div>
+        </div>
+        <div class="event">
+            <div class="polaroid">
+                <img src="dolphins.JPG" alt="Image 2">
+            </div>
+            <div class="description">
+                <h2>Event 2</h2>
+                <p> With Ashley being a marine scientist, Ricardo quickly improved in his swimming abilities.</p>
+            </div>
+        </div>
+        <!-- Add more events here -->
+    </div>
 </body>
 </html>
-
