@@ -26,14 +26,14 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 250px;
-    height: 250px;
+    width: 500px;
+    height: 500px;
     overflow: hidden;
     position: relative;
 }
 
 .polaroid img {
-    width: 50%; /* Resize the image to half its original size */
+    width: 100%; /* Resize the image to half its original size */
     height: auto;
     object-fit: cover;
     border: 10px solid white; /* Polaroid border */
