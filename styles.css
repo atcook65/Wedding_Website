@@ -58,33 +58,3 @@ body, h1, p, img {
     margin-top: 10px;
     font-weight: bold;
 }
-
-
-/* Style for language buttons */
-.language-buttons {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-}
-
-.flag-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin: 5px;
-}
-
-.flag-icon {
-    width: 24px;
-    height: auto;
-    margin-right: 5px;
-}
-
-/* Style for content */
-.content {
-    text-align: center;
-    margin: 20px;
-}
-
