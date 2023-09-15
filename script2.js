@@ -1,24 +1,35 @@
-// Define a variable to store the selected language (default to English)
-let currentLanguage = 'en';
-
-// Function to change the language
 function changeLanguage(language) {
-    currentLanguage = language;
-    translatePage();
+    i18next.changeLanguage(language);
 }
 
-// Function to translate the page content
-function translatePage() {
-    fetch(`${currentLanguage}.json`)
-        .then(response => response.json())
-        .then(data => {
-            // Replace content with translated text
-            document.getElementById('welcome_message').textContent = data.welcome_message;
-            document.getElementById('about_us').textContent = data.about_us;
-            document.getElementById('contact_us').textContent = data.contact_us;
-            // Add more elements as needed
-        });
-}
+i18next.init({
+    lng: 'en', // Set the default language
+    resources: {
+        en: {
+            translation: {
+                welcome_message: 'Welcome to our website!',
+                about_us: 'About Us',
+                contact_us: 'Contact Us',
+                // Add more translations for English
+            }
+        },
+        es: {
+            translation: {
+                welcome_message: 'Bienvenidos a nuestro sitio web!',
+                about_us: 'Sobre nosotros',
+                contact_us: 'Contáctenos',
+                // Add more translations for Spanish
+            }
+        }
+    }
+}, function(err, t) {
+    // Initialize translations
+    updateContent();
+});
 
-// Initialize translation
-translatePage();
+function updateContent() {
+    document.getElementById('welcome_message').textContent = i18next.t('welcome_message');
+    document.getElementById('about_us').textContent = i18next.t('about_us');
+    document.getElementById('contact_us').textContent = i18next.t('contact_us');
+    // Update more content as needed
+}
