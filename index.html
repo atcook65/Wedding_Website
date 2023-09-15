@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <title>Ashley & Ricardo's Wedding</title>
 </head>
+
 <body>
+    <div class="language-switch">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('es')">Español</button>
+    </div>
+    <!-- Include i18next from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/dist/umd/i18next.min.js"></script>
+    <script src="script.js"></script>
+    <!-- ... (the rest of your content) ... -->
+
     <div class="background-image">
         <div class="wedding-details">
             <h1 class="cursive-text">Ashley & Ricardo</h1>
@@ -42,7 +53,6 @@
     </div>
 </body>
 </html>
-<!-- Include i18next from a CDN -->
-<script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/dist/umd/i18next.min.js"></script>
 
-<script src="script.js"></script>
+
+
