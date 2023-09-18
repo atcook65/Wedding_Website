@@ -13,9 +13,11 @@ function translatePage() {
         .then(response => response.json())
         .then(data => {
             // Replace content with translated text
-            document.getElementById('welcome_message').textContent = data.welcome_message;
-            document.getElementById('about_us').textContent = data.about_us;
-            document.getElementById('contact_us').textContent = data.contact_us;
+            document.getElementById('HOTEL').textContent = data.HOTEL;
+            document.getElementById('PERU').textContent = data.PERU;
+            document.getElementById('CUSCO').textContent = data.CUSCO;
+            document.getElementById('ABOUT_US').textContent = data.ABOUT_US;
+
             // Add more elements as needed
         });
 }
