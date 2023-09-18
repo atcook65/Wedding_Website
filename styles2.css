@@ -6,7 +6,6 @@ body {
     background-size: cover;
 }
 
-
 .timeline {
     display: flex;
     flex-direction: column;
@@ -28,8 +27,8 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -52,14 +51,4 @@ body {
     font-size: 16px;
     line-height: 1.5;
     z-index: 2;
-}
-
-/* Add a class for enlarging images */
-.enlarge {
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.enlarge:hover {
-    transform: scale(2.1);
 }
