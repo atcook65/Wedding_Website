@@ -2,10 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('il_1140xN.2285826726_el9k.jpg') center/cover fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
-
 
 .timeline {
     display: flex;
@@ -84,4 +83,3 @@ body {
     max-width: 90%;
     max-height: 90%;
 }
-
