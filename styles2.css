@@ -6,6 +6,7 @@ body {
     background-size: cover;
 }
 
+
 .timeline {
     display: flex;
     flex-direction: column;
@@ -20,7 +21,6 @@ body {
     margin: 20px;
     position: relative;
     z-index: 1;
-    transform: rotate(-3deg); /* Tilted angle */
 }
 
 .polaroid {
@@ -28,9 +28,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
     border-radius: 10px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
-    width: 200px;
-    height: 200px;
     position: relative;
     z-index: 1;
 }
@@ -39,7 +39,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: rotate(3deg); /* Slightly different angle */
 }
 
 .description {
@@ -55,29 +54,12 @@ body {
     z-index: 2;
 }
 
-.expanded-image-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 3;
-    justify-content: center;
-    align-items: center;
-}
-
-.expanded-image {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+/* Add a class for enlarging images */
+.enlarge {
     cursor: pointer;
-    color: white;
-    font-size: 24px;
+    transition: transform 0.2s;
+}
+
+.enlarge:hover {
+    transform: scale(1.1);
 }
