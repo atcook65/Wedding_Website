@@ -1,7 +1,7 @@
 {
   "HOTEL": "Sitio web del hotel",
-  "WEDDING_DAY": "Itinerario del día de la boda",
+  "WEDDING_DAY": "Itinerario del <br> día de la boda",
   "ABOUT_US": "Nuestra historia",
-  "CUSCO": "Recomendaciones turísticas para Cusco",
-  "PERU": "Recomendaciones turísticas para Perú"
+  "CUSCO": "Recomendaciones <br> turísticas para Cusco",
+  "PERU": "Recomendaciones <br> turísticas para Perú"
 }
