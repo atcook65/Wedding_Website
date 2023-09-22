@@ -3,56 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 10 Tourist Destinations in Peru</title>
-    <link rel="stylesheet" href="styles3.css">
+    <title>Top Tourist Destinations in Peru</title>
+    <style>
+        /* Add your background image here */
+        body {
+            background-image: url('perumap_OLD.jpg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Style for the destination container */
+        .destination-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
+            border: 2px solid #333; /* Postage stamp border */
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for the destination image */
+        .destination-image {
+            max-width: 40%; /* Adjust the image width as needed */
+            height: auto;
+            border: 2px solid #333; /* Postage stamp border */
+        }
+        
+        /* Style for the destination description */
+        .destination-description {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        /* Style for destination titles */
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Top 10 Tourist Destinations in Peru</h1>
-    </header>
-    <main>
-        <section class="destination">
-            <img src="pexels-photo-2929906.jpg" alt="Machu Picchu">
-            <p>Machu Picchu - A UNESCO World Heritage site, Machu Picchu is an ancient Inca citadel set high in the Andes Mountains.</p>
-        </section>
-        <section class="destination">
-            <img src="pexels-photo-5198285.jpg" alt="Cusco">
-            <p>Cusco - The historic city of Cusco was the capital of the Inca Empire and is now a UNESCO World Heritage Site. Its charming streets are lined with colonial architecture and archaeological wonders.</p>
-        </section>
-        <section class="destination">
-            <img src="pexels-photo-2929906.jpg" alt="Titicaca">
-            <p>Lake Titicaca - Situated on the border between Peru and Bolivia, Lake Titicaca is one of the highest navigable lakes in the world. The floating Uros Islands and the tranquil Amantani Island are popular destinations on the lake.</p>
-        </section>
-        <section class="destination">
-            <img src="pexels-photo-2929910.jpg" alt="Arequipa">
-            <p>Arequipa - Known as the "White City" for its stunning white volcanic stone architecture, Arequipa is a charming colonial city surrounded by dramatic landscapes, including the nearby Colca Canyon.</p>
-        </section>
-        <section class="destination">
-            <img src="free-photo-of-nazca-lines-on-rock.jpg" alt="Nazca">
-            <p>Nazca Lines - The Nazca Lines are mysterious geoglyphs etched into the desert floor, depicting various animals and geometric shapes. They are best viewed from the air on a scenic flight. </p>
-        </section>
-        <section class="destination">
-            <img src="pexels-photo-2929906.jpg" alt="SacredValley">
-            <p>Sacred Valley of the Incas - This fertile valley is home to numerous Inca ruins, traditional markets, and picturesque villages. It's an excellent base for exploring the surrounding Andean landscapes.</p>
-        </section>
-        <section class="destination">
-            <img src="pexels-photo-2929906.jpg" alt="Amazon">
-            <p>Amazon Rainforest - Peru offers access to a significant portion of the Amazon Rainforest, with lodges and tours available for immersive wildlife encounters and rainforest exploration.</p>
-        </section>
-        <section class="destination">
-            <img src="pexels-photo-2929906.jpg" alt="Huacachina">
-            <p>Huacachina Oasis - This picturesque desert oasis is surrounded by towering sand dunes, making it a popular spot for dune buggying and sandboarding adventures.</p>
-        </section>
-        <section class="destination">
-            <img src="pexels-photo-2929906.jpg" alt="Machu Picchu">
-            <p>Paracas National Reserve - This coastal reserve is known for its stunning beaches, dramatic cliffs, and diverse birdlife, including the Humboldt penguin colony on the Ballestas Islands.</p>
-        </section>
-        <section class="destination">
-            <img src="free-photo-of-view-of-the-lake-69-near-the-city-of-huaraz-peru.jpg" alt="Huaraz">
-            <p>Huaraz and Cordillera Blanca - A paradise for trekkers and climbers, Huaraz is the gateway to the Cordillera Blanca, a spectacular range of snow-capped peaks, glaciers, and pristine lakes.</p>
-        </section>
-        <!-- Repeat this section for other destinations -->
+    <div class="destination-container">
+        <img class="destination-image" src="pexels-photo-2929906.jpg" alt="Destination 1">
+        <div class="destination-description">
+            <h2>Machu Picchu</h2>
+            <p>A UNESCO World Heritage site, Machu Picchu is an ancient Inca citadel set high in the Andes Mountains.</p>
+        </div>
+    </div>
 
-    </main>
+    <div class="destination-container">
+        <img class="destination-image" src="destination2.jpg" alt="Destination 2">
+        <div class="destination-description">
+            <h2>Cusco</h2>
+            <p>The historic city of Cusco was the capital of the Inca Empire and is now a UNESCO World Heritage Site. Its charming streets are lined with colonial architecture and archaeological wonders.</p>
+        </div>
+    </div>
+    
+    <div class="destination-container">
+        <img class="destination-image" src="destination1.jpg" alt="Destination 1">
+        <div class="destination-description">
+            <h2>Lake Titicaca </h2>
+            <p>Situated on the border between Peru and Bolivia, Lake Titicaca is one of the highest navigable lakes in the world. The floating Uros Islands and the tranquil Amantani Island are popular destinations on the lake.</p>
+        </div>
+    </div>
+
+    <div class="destination-container">
+        <img class="destination-image" src="pexels-photo-2929910.jpg" alt="Destination 2">
+        <div class="destination-description">
+            <h2>Arequipa</h2>
+            <p>Known as the "White City" for its stunning white volcanic stone architecture, Arequipa is a charming colonial city surrounded by dramatic landscapes, including the nearby Colca Canyon.</p>
+        </div>
+    </div>
+    
+    <div class="destination-container">
+        <img class="destination-image" src="destination1.jpg" alt="Destination 1">
+        <div class="destination-description">
+            <h2>Nazca Lines</h2>
+            <p>The Nazca Lines are mysterious geoglyphs etched into the desert floor, depicting various animals and geometric shapes. They are best viewed from the air on a scenic flight.</p>
+        </div>
+    </div>
+
+    <div class="destination-container">
+        <img class="destination-image" src="destination2.jpg" alt="Destination 2">
+        <div class="destination-description">
+            <h2>Sacred Valley of the Incas</h2>
+            <p>This fertile valley is home to numerous Inca ruins, traditional markets, and picturesque villages. It's an excellent base for exploring the surrounding Andean landscapes.</p>
+        </div>
+    </div>
+
+    <div class="destination-container">
+        <img class="destination-image" src="destination2.jpg" alt="Destination 2">
+        <div class="destination-description">
+            <h2>The Amazon Rainforest</h2>
+            <p>Peru offers access to a significant portion of the Amazon Rainforest, with lodges and tours available for immersive wildlife encounters and rainforest exploration.</p>
+        </div>
+    </div>
+
+    <div class="destination-container">
+        <img class="destination-image" src="pexels-photo-2929906.jpg" alt="Destination 2">
+        <div class="destination-description">
+            <h2>Huacachina Oasis</h2>
+            <p>This picturesque desert oasis is surrounded by towering sand dunes, making it a popular spot for dune buggying and sandboarding adventures.</p>
+        </div>
+    </div>
+
+    <div class="destination-container">
+        <img class="destination-image" src="pexels-photo-2929906.jpg" alt="Destination 2">
+        <div class="destination-description">
+            <h2>Paracas National Reserve</h2>
+            <p> This coastal reserve is known for its stunning beaches, dramatic cliffs, and diverse birdlife, including the Humboldt penguin colony on the Ballestas Islands..</p>
+        </div>
+    </div>
+
+    <div class="destination-container">
+        <img class="destination-image" src="free-photo-of-view-of-the-lake-69-near-the-city-of-huaraz-peru.jpg" alt="Destination 2">
+        <div class="destination-description">
+            <h2>Huaraz and Cordillera Blanca</h2>
+            <p> A paradise for trekkers and climbers, Huaraz is the gateway to the Cordillera Blanca, a spectacular range of snow-capped peaks, glaciers, and pristine lakes. </p>
+        </div>
+    </div>
+    
+    <!-- Repeat the above container structure for each destination -->
 </body>
 </html>
+
+
+
