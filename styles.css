@@ -27,12 +27,6 @@ body, h1, p, img {
     border-radius: 10px;
 }
 
-/* Style the cursive text */
-.cursive-text {
-    font-family: cursive;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
 
 /* Style the image links with circular frames */
 .image-links {
@@ -73,46 +67,56 @@ body, h1, p, img {
     margin: 0 10px;
 }
 
-  /* Define styles for the sections */
+ /* Define styles for the sections */
+        body {
+            font-family: cursive;
+            text-align: center;
+        }
+
         .section {
-            margin-bottom: 20px;
+            margin: 20px 0;
+        }
+
+        /* Style for the title section */
+        .title {
+            font-size: 48px;
         }
 
         /* Style for the date and location sections */
         .date-location {
             display: flex;
+            justify-content: center;
             align-items: center;
+            font-size: 24px;
         }
 
         .date {
-            font-size: 24px;
             font-weight: bold;
-            flex: 1;
-            text-align: right;
+        }
+
+        .separator {
+            border-right: 2px solid #000;
+            margin: 0 20px;
+            height: 100px;
         }
 
         .location {
-            font-size: 24px;
             font-weight: bold;
-            flex: 1;
-        }
-
-        .year {
-            font-size: 20px;
         }
 
         /* Style for the event sections */
         .event {
-            font-size: 24px;
+            font-size: 36px;
             font-weight: bold;
         }
 
         .event-details {
-            font-size: 16px;
+            font-size: 24px;
         }
 
         /* Style for the horizontal line */
         .divider {
-            border-top: 1px solid #000;
-            margin-top: 20px;
+            border-top: 2px solid #000;
+            margin: 20px auto;
+            width: 80%;
         }
