@@ -13,7 +13,6 @@ function translatePage() {
         .then(response => response.json())
         .then(data => {
             // Replace content with translated text
-            document.getElementById('DATE').textContent = data.DATE;
             document.getElementById('HOTEL').textContent = data.HOTEL;
             document.getElementById('WEDDING_DAY').textContent = data.WEDDING_DAY;
             document.getElementById('PERU').textContent = data.PERU;
