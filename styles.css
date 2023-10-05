@@ -73,3 +73,46 @@ body, h1, p, img {
     margin: 0 10px;
 }
 
+  /* Define styles for the sections */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        /* Style for the date and location sections */
+        .date-location {
+            display: flex;
+            align-items: center;
+        }
+
+        .date {
+            font-size: 24px;
+            font-weight: bold;
+            flex: 1;
+            text-align: right;
+        }
+
+        .location {
+            font-size: 24px;
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .year {
+            font-size: 20px;
+        }
+
+        /* Style for the event sections */
+        .event {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .event-details {
+            font-size: 16px;
+        }
+
+        /* Style for the horizontal line */
+        .divider {
+            border-top: 1px solid #000;
+            margin-top: 20px;
+        }
