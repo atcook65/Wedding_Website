@@ -67,9 +67,8 @@ body, h1, p, img {
     margin: 0 10px;
 }
 
- /* Define styles for the sections */
+        /* Define styles for the sections */
         body {
-            font-family: cursive;
             text-align: center;
         }
 
@@ -79,7 +78,8 @@ body, h1, p, img {
 
         /* Style for the title section */
         .title {
-            font-size: 48px;
+            font-size: 72px;
+            font-family: 'Alex Brush', cursive;
         }
 
         /* Style for the date and location sections */
@@ -87,7 +87,8 @@ body, h1, p, img {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 36px;
+            font-family: 'Garamond', serif;
         }
 
         .date {
@@ -108,10 +109,12 @@ body, h1, p, img {
         .event {
             font-size: 36px;
             font-weight: bold;
+            font-family: 'Garamond', serif;
         }
 
         .event-details {
             font-size: 24px;
+            font-family: 'Garamond', serif;
         }
 
         /* Style for the horizontal line */
