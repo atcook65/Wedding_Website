@@ -18,7 +18,7 @@ function translatePage() {
             document.getElementById('PERU').textContent = data.PERU;
             document.getElementById('CUSCO').textContent = data.CUSCO;
             document.getElementById('ABOUT_US').textContent = data.ABOUT_US;
-            document.getElementById('DATE').textContent = data.DATE;
+            //document.getElementById('DATE').textContent = data.DATE;
             // Add more elements as needed
         });
 }
