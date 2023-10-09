@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 /* Reset some default styles */
 body, h1, p, img {
     margin: 0;
@@ -12,6 +14,7 @@ body, h1, p, img {
     height: 100vh;
     position: relative;
 }
+
 
 /* Style the rectangular shape for wedding details */
 .wedding-details {
@@ -123,4 +126,17 @@ body, h1, p, img {
             margin: 20px auto;
             width: 80%;
         }
- 
+
+/* Add line break for smaller screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
+    .section.date-location .date,
+    .section.event-details span {
+        white-space: pre-line;
+    }
+
+        .wedding-details {
+        width: 90%; /* Increase width to fit content */
+        padding: 10px; /* Reduce padding for better spacing */
+    }
+}
+
