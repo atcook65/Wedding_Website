@@ -14,19 +14,21 @@ body, h1, p, img {
 }
 
 /* Style the rectangular shape for wedding details */
+@media screen and (max-width: 768px) {
+
 .wedding-details {
     background-color: rgba(255, 228, 196, 0.7);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 90%;
     max-width: 500px;
     border-radius: 10px;
 }
-
+}
 /* Style the image links with circular frames */
 .image-links {
     display: flex;
@@ -139,10 +141,3 @@ body {
     /* Add more responsive styles as needed */
 }
 /* Add line break for smaller screens (e.g., mobile) */
-@media screen and (max-width: 768px) {
-    .section.date-location .date,
-    .section.event-details span {
-        white-space: pre-line;
-    }
-}
-
