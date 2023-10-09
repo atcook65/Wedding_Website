@@ -78,7 +78,6 @@ body {
 
 /* Style for the title section */
 
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 
 .title {
     font-size: 72px;
@@ -127,7 +126,7 @@ body {
 /* Responsive styles */
 @media screen and (max-width: 768px) {
     /* Adjust styles for smaller screens (e.g., mobile devices) */
-    .wedding-details {
+        .wedding-details {
         width: 90%;
     }
 
@@ -136,5 +135,11 @@ body {
         height: 100px;
     }
 
+    .section.date-location .date,
+    .section.event-details span {
+        white-space: pre-line;
+    }
+
     /* Add more responsive styles as needed */
 }
+
