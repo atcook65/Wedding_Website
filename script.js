@@ -14,6 +14,7 @@ function translatePage() {
         .then(data => {
             // Replace content with translated text
             document.getElementById('DATE').textContent = data.DATE;
+            document.getElementById('DATE2').textContent = data.DATE2;
             document.getElementById('HOTEL').textContent = data.HOTEL;
             document.getElementById('WEDDING_DAY').textContent = data.WEDDING_DAY;
             document.getElementById('PERU').textContent = data.PERU;
