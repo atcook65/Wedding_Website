@@ -27,7 +27,6 @@ body, h1, p, img {
     border-radius: 10px;
 }
 
-
 /* Style the image links with circular frames */
 .image-links {
     display: flex;
@@ -67,59 +66,72 @@ body, h1, p, img {
     margin: 0 10px;
 }
 
-        /* Define styles for the sections */
-        body {
-            text-align: center;
-        }
+/* Define styles for the sections */
+body {
+    text-align: center;
+    font-family: 'Garamond', serif; /* Apply a default font */
+}
 
-        .section {
-            margin: 20px 0;
-        }
+.section {
+    margin: 20px 0;
+}
 
-        /* Style for the title section */
-        .title {
-            font-size: 72px;
-            font-family: 'Alex Brush', cursive;
-        }
+/* Style for the title section */
+.title {
+    font-size: 72px;
+    font-family: 'Alex Brush', cursive;
+}
 
-        /* Style for the date and location sections */
-        .date-location {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-            font-family: 'Garamond', serif;
-        }
+/* Style for the date and location sections */
+.date-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
 
-        .date {
-            font-weight: bold;
-        }
+.date {
+    font-weight: bold;
+}
 
-        .separator {
-            border-right: 2px solid #000;
-            margin: 0 20px;
-            height: 100px;
-        }
+.separator {
+    border-right: 2px solid #000;
+    margin: 0 20px;
+    height: 100px;
+}
 
-        .location {
-            font-weight: bold;
-        }
+.location {
+    font-weight: bold;
+}
 
-        /* Style for the event sections */
-        .event {
-            font-size: 36px;
-            font-weight: bold;
-            font-family: 'Garamond', serif;
-        }
+/* Style for the event sections */
+.event {
+    font-size: 36px;
+    font-weight: bold;
+}
 
-        .event-details {
-            font-size: 24px;
-            font-family: 'Garamond', serif;
-        }
+.event-details {
+    font-size: 24px;
+}
 
-        /* Style for the horizontal line */
-        .divider {
-            border-top: 2px solid #000;
-            margin: 20px auto;
-            width: 80%;
-        }
+/* Style for the horizontal line */
+.divider {
+    border-top: 2px solid #000;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens (e.g., mobile devices) */
+    .wedding-details {
+        width: 90%;
+    }
+
+    .image-link img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Add more responsive styles as needed */
+}
