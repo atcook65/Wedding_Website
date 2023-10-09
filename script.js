@@ -13,20 +13,18 @@ function translatePage() {
         .then(response => response.json())
         .then(data => {
             // Replace content with translated text
-            document.getElementById('DATE').textContent = data.DATE;
-            document.getElementById('WELCOME').textContent = data.WELCOME;
-            document.getElementById('DATE2').textContent = data.DATE2;
-            document.getElementById('WEDDING').textContent = data.WEDDING;
-            document.getElementById('DATE3').textContent = data.DATE3;
-            document.getElementById('RECEPTION').textContent = data.RECEPTION;
-            document.getElementById('HOTEL').textContent = data.HOTEL;
-            document.getElementById('WEDDING_DAY').textContent = data.WEDDING_DAY;
-            document.getElementById('PERU').textContent = data.PERU;
-            document.getElementById('CUSCO').textContent = data.CUSCO;
-            document.getElementById('ABOUT_US').textContent = data.ABOUT_US;
+
+            document.getElementById('DATE').innerHTML = data.DATE;
+            document.getElementById('WELCOME').innerHTML = data.WELCOME;
+            document.getElementById('DATE2').innerHTML = data.DATE2;
+            document.getElementById('WEDDING').innerHTML = data.WEDDING;
+            document.getElementById('DATE3').innerHTML = data.DATE3;
+            document.getElementById('RECEPTION').innerHTML = data.RECEPTION;
+            document.getElementById('HOTEL').innerHTML = data.HOTEL;
+            document.getElementById('WEDDING_DAY').innerHTML = data.WEDDING_DAY;
+            document.getElementById('PERU').innerHTML = data.PERU;
+            document.getElementById('CUSCO').innerHTML = data.CUSCO;
+            document.getElementById('ABOUT_US').innerHTML = data.ABOUT_US;
             // Add more elements as needed
         });
 }
-
-// Initialize translation
-translatePage();
