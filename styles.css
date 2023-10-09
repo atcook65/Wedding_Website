@@ -135,11 +135,14 @@ body {
         height: 100px;
     }
 
+
+    /* Add more responsive styles as needed */
+}
+/* Add line break for smaller screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
     .section.date-location .date,
     .section.event-details span {
         white-space: pre-line;
     }
-
-    /* Add more responsive styles as needed */
 }
 
