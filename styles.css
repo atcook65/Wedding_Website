@@ -21,13 +21,14 @@ body, h1, p, img {
     background-color: rgba(255, 228, 196, 0.7);
     padding: 20px;
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
     max-width: 500px;
     border-radius: 10px;
+    z-index: 1; 
 }
 
 
@@ -36,6 +37,8 @@ body, h1, p, img {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    position: relative; /* add position relative */
+    z-index: 2; /* add z-index to make sure it appears in front of the shape */
 }
 
 .image-link {
@@ -60,6 +63,8 @@ body, h1, p, img {
 .language-switch {
     text-align: center;
     margin: 10px;
+    position: relative; /* add position relative */
+    z-index: 2; /* add z-index to make sure it appears in front of the shape */
 }
 
 .language-switch button {
@@ -133,10 +138,11 @@ body, h1, p, img {
     .section.event-details span {
         white-space: pre-line;
     }
-
-        .wedding-details {
-        width: 90%; /* Increase width to fit content */
-        padding: 10px; /* Reduce padding for better spacing */
+    
+      .wedding-details {
+        width: 90%;
+        max-width: none;
     }
+
 }
 
