@@ -29,10 +29,10 @@ body, h1, p, img {
     max-width: 500px;
     border-radius: 10px;
     font-size: 4vw;
+    aspect-ratio: 16/9;
     line-height: 1.5;
     z-index: 1; 
 }
-
 
 /* Style the image links with circular frames */
 .image-links {
@@ -147,5 +147,12 @@ body, h1, p, img {
   .wedding-details {
     font-size: 16px;
     line-height: 1.5;
+    width: 90vw;
+    height: 50vh;
   }
 }
+
+<TextView
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:text="@string/lorem_ipsum" />
