@@ -138,11 +138,20 @@ body, h1, p, img {
     .section.event-details span {
         white-space: pre-line;
     }
-    
-      .wedding-details {
-        width: 90%;
-        max-width: none;
-    }
 
 }
 
+@media screen and (max-width: 768px) {
+  .wedding-details {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .wedding-details {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
