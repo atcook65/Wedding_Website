@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+family=Alex+Brush&display=swap');
 
 /* Reset some default styles */
 body, h1, p, img {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* add box-sizing property */
 }
 
 /* Create a scrolling background image */
@@ -12,8 +11,8 @@ body, h1, p, img {
     background-image: url('pexels-photo-2516418.jpg');
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
     position: relative;
-    object-fit: cover; /* add object-fit property */
 }
 
 
@@ -27,7 +26,7 @@ body, h1, p, img {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
-    max-width: 100%; /* add max-width property */
+    max-width: 500px;
     border-radius: 10px;
     font-size: 4vw;
     aspect-ratio: 16/9;
@@ -40,8 +39,8 @@ body, h1, p, img {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    position: relative;
-    z-index: 2;
+    position: relative; /* add position relative */
+    z-index: 2; /* add z-index to make sure it appears in front of the shape */
 }
 
 .image-link {
@@ -66,8 +65,8 @@ body, h1, p, img {
 .language-switch {
     text-align: center;
     margin: 10px;
-    position: relative;
-    z-index: 2;
+    position: relative; /* add position relative */
+    z-index: 2; /* add z-index to make sure it appears in front of the shape */
 }
 
 .language-switch button {
@@ -78,69 +77,69 @@ body, h1, p, img {
     margin: 0 10px;
 }
 
-/* Define styles for the sections */
-body {
-    text-align: center;
-}
+        /* Define styles for the sections */
+        body {
+            text-align: center;
+        }
 
-.section {
-    margin: 20px 0;
-}
+        .section {
+            margin: 20px 0;
+        }
 
-/* Style for the title section */
-.title {
-    font-size: 72px;
-    font-family: 'Alex Brush', cursive;
-}
+        /* Style for the title section */
+        .title {
+            font-size: 72px;
+            font-family: 'Alex Brush', cursive;
+        }
 
-/* Style for the date and location sections */
-.date-location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-    font-family: 'Garamond', serif;
-}
+        /* Style for the date and location sections */
+        .date-location {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-family: 'Garamond', serif;
+        }
 
-.date {
-    font-weight: bold;
-}
+        .date {
+            font-weight: bold;
+        }
 
-.separator {
-    border-right: 2px solid #000;
-    margin: 0 20px;
-    height: 100px;
-}
+        .separator {
+            border-right: 2px solid #000;
+            margin: 0 20px;
+            height: 100px;
+        }
 
-.location {
-    font-weight: bold;
-}
+        .location {
+            font-weight: bold;
+        }
 
-/* Style for the event sections */
-.event {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: 'Garamond', serif;
-}
+        /* Style for the event sections */
+        .event {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Garamond', serif;
+        }
 
-.event-details {
-    font-size: 24px;
-    font-family: 'Garamond', serif;
-}
+        .event-details {
+            font-size: 24px;
+            font-family: 'Garamond', serif;
+        }
 
-/* Style for the horizontal line */
-.divider {
-    border-top: 2px solid #000;
-    margin: 20px auto;
-    width: 80%;
-}
+        /* Style for the horizontal line */
+        .divider {
+            border-top: 2px solid #000;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+
 
 @media screen and (max-width: 768px) {
   .wedding-details {
     width: 90vw;
     height: auto;
-    font-size: 16px;
-    line-height: 1.5;
   }
 }
 
@@ -150,3 +149,11 @@ body {
     line-height: 1.5;
   }
 }
+
+
+<TextView
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:text="@string/lorem_ipsum"
+  android:textSize="16sp"
+  android:lineSpacingExtra="8dp" />
