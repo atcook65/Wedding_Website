@@ -12,7 +12,7 @@ body, h1, p, img {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
-    position: relative;
+    overflow: hidden;
 }
 
 
@@ -22,8 +22,8 @@ body, h1, p, img {
     padding: 20px;
     text-align: center;
     position: relative;
-    top: 50%;
     left: 50%;
+    margin-top: calc(50vh - 50%);
     transform: translate(-50%, -50%);
     width: 70%;
     max-width: 500px;
@@ -33,6 +33,7 @@ body, h1, p, img {
     line-height: 1.5;
     z-index: 1; 
 }
+
 
 /* Style the image links with circular frames */
 .image-links {
