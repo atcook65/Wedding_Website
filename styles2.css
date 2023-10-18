@@ -1,48 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
-    <link rel="stylesheet" href="styles2.css">
-    <!-- Adding the font link here ensures it's loaded for your CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="gallery">
-    <!-- Image block 1 -->
-    <div class="image">
-        <a href="1stphoto.jpg" data-lightbox="gallery"> <!-- Make sure the file name is correct -->
-            <img src="1stphoto.jpg" alt="1stphoto"> <!-- Make sure the file name is correct -->
-            <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
-        </a>
-    </div>
-    <!-- Image block 2 -->
-    <div class="image">
-        <a href="iquitos.JPG" data-lightbox="gallery">
-            <img src="iquitos.JPG" alt="2ndphoto">
-            <div class="caption">Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins</div>
-        </a>
-    </div>
-    <!-- Image block 3 -->
-    <div class="image">
-        <a href="dolphins.JPG" data-lightbox="gallery">
-            <img src="dolphins.JPG" alt="3rdphoto">
-            <div class="caption">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
-        </a>
-    </div>
-    <!-- Image block 4 -->
-    <div class="image">
-        <a href="engaged.jpg" data-lightbox="gallery">
-            <img src="engaged.jpg" alt="4thphoto">
-            <div class="caption">On 4/20/2022 we got engaged!</div>
-        </a>
-    </div>
-    <!-- Additional image blocks can be added in the same manner -->
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-<script src="script2.js"></script>
-</body>
-</html>
+body {
+    background-image: url('il_1140xN.2285826726_el9k.jpg'); /* Make sure this path and filename is correct and the image is in the right folder */
+    background-size: cover;
+    font-family: 'Permanent Marker', cursive; /* General text on the page will use this font */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.image {
+    background-color: #fff;
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    width: 250px; /* Adjust based on your preference */
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.image:nth-child(odd) {
+    transform: rotate(-7deg); /* Rotate in one direction for odd-numbered images */
+}
+
+.image:nth-child(even) {
+    transform: rotate(5deg); /* Rotate in another direction for even-numbered images */
+}
+
+.image img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.caption {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Homemade Apple', cursive; /* This font will be applied to the captions */
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+}
