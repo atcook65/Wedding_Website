@@ -1,53 +1,51 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&display=swap" rel="stylesheet">
-
-
 body {
-    
-  background-image: url('il_1140xN.2285826726_el9k.jpg');
-  background-size: cover;
-  font-family: 'Permanent Marker', cursive; /* This is a handwriting-style font from Google Fonts */
+    background-image: url('il_1140xN.2285826726_el9k.jpg'); /* Make sure this path and filename is correct and the image is in the right folder */
+    background-size: cover;
+    font-family: 'Permanent Marker', cursive; /* General text on the page will use this font */
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 
 .image {
-  background-color: #fff;
-  margin: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s;
-  width: 250px; /* You can adjust based on your preference */
-  transform: rotate(-7deg); /* To create the haphazard look */
+    background-color: #fff;
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    width: 250px; /* Adjust based on your preference */
 }
 
 .image:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.image:nth-child(odd) {
+    transform: rotate(-7deg); /* Rotate in one direction for odd-numbered images */
+}
+
+.image:nth-child(even) {
+    transform: rotate(5deg); /* Rotate in another direction for even-numbered images */
 }
 
 .image img {
-  width: 100%;
-  border-bottom: 1px solid #ccc;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
 }
 
 .caption {
-  text-align: center;
-  padding: 15px;
-  font-size: 18px;
-  font-family: 'Homemade Apple', cursive; /* This resembles text written by a marker. You can import it from Google Fonts */
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Homemade Apple', cursive; /* This font will be applied to the captions */
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
-  .gallery {
-    flex-direction: column;
-  }
+    .gallery {
+        flex-direction: column;
+    }
 }
-
-
