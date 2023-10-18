@@ -30,7 +30,6 @@ body, h1, p, img {
     font-size: 4vw; /* responsive font size */
     line-height: 1.5;
     z-index: 1;
-    /* Removed fixed aspect-ratio */
 }
 
 /* Style the image links with circular frames */
@@ -40,27 +39,26 @@ body, h1, p, img {
     margin-top: 50px;
     position: relative;
     z-index: 2;
-    flex-wrap: wrap; /* Allow wrapping if there isn't enough room for all items */
+    flex-wrap: wrap; /* allows the container to wrap the images onto the next line for smaller screens */
 }
 
 .image-link {
     text-align: center;
     margin: 0 20px;
-    width: 150px; /* consistent size for circular images */
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* ensure a minimum content area to maintain aspect ratio */
+    flex: 0 1 150px; /* flex-basis of 150px with the ability to shrink but not grow */
+    display: flex; /* added to make sure the container is a flexbox */
+    justify-content: center; /* center the content (the image) within */
 }
 
 .image-link img {
     border-radius: 50%;
     border: 3px solid rgba(255, 228, 196, 0.7);
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%; /* Full width for consistent circle shape */
-    height: 100%; /* Full height for consistent circle shape */
-    object-fit: cover; /* Maintain aspect ratio of images without cropping */
+    /* Use max values to ensure images are responsive and maintain aspect ratio */
+    max-width: 100%; /* makes sure the image doesn’t exceed its container */
+    height: auto; /* auto to maintain the aspect ratio */
+    object-fit: cover; /* cover to make sure the image covers all area */
+    flex-shrink: 0; /* prevent flex items from shrinking */
 }
 
 /* Style the descriptions */
@@ -150,21 +148,11 @@ body {
     }
 
     .image-link {
-        width: 100px; /* smaller circle sizes for smaller screens */
-        height: 100px;
+        margin: 0 10px; /* less margin on smaller screens */
+        flex: 0 1 120px; /* smaller size on smaller screens */
     }
-
-    .image-link img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-    /* other responsive styles can be combined here */
+    /* Adjust other elements as needed */
 }
 
 /* Additional media queries for other screen sizes */
 @media screen and (min-width: 1366px) {
-    .wedding-details {
-        /* styles for larger screens, adjust as necessary */
-    }
-    /* Add adjustments for other elements on larger screens */
-}
