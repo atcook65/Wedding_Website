@@ -1,59 +1,74 @@
 body {
-    background-image: url('il_1140xN.2285826726_el9k.jpg');
+    background-image: url('your-background-image.jpg'); /* Replace with your actual image file */
     background-size: cover;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Homemade Apple', cursive;
+    margin: 0;
+    padding: 0;
 }
 
 .gallery {
+    padding: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
+    justify-content: center;
 }
 
 .image {
-    background-color: #fff;
-    margin: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 200px; /* Adjusting to make images square */
-    height: 200px; /* Same as above */
-    overflow: hidden; /* So that images don't overflow the div */
-    position: relative; /* To position the caption within the div */
-    text-decoration: none; /* Remove underline from captions */
+    margin: 10px;
+    position: relative; /* New: for caption positioning */
+    transform: rotate(0deg); /* Images start straight... */
+    transition: transform 0.2s; /* ... and rotate during hover */
 }
 
-.image img {
-    width: 100%;
-    display: block; /* Remove space below images */
-    transition: transform 0.2s; /* Smooth transformation */
+.image:nth-child(odd) {
+    transform: rotate(-3deg); /* Odd images are tilted one way */
 }
 
-.image:hover img {
-    transform: scale(1.1);
+.image:nth-child(even) {
+    transform: rotate(3deg); /* Even images are tilted the other way */
+}
+
+.image:hover {
+    transform: rotate(0); /* Images straighten up on hover */
+}
+
+.image a img {
+    display: block;
+    width: 300px; /* Larger image size */
+    height: 300px; /* Maintain square aspect */
+    object-fit: cover; /* This will ensure your images cover the frame without distortion */
+    border-radius: 5px; /* Optional: for slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for more depth */
+    transition: box-shadow 0.2s; /* Smooth shadow transition */
+}
+
+.image:hover a img {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow grows on hover */
 }
 
 .caption {
-    text-align: center;
-    padding: 10px;
-    font-size: 18px;
     font-family: 'Homemade Apple', cursive;
-    position: absolute; /* Position at the bottom of image div */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: black; /* Make text color black */
-    background: rgba(255, 255, 255, 0.7); /* Slight white overlay for readability */
-    text-decoration: none; /* Ensure no underline */
+    text-align: center;
+    position: absolute; /* Positioning within the image div */
+    bottom: -30px; /* Position under the image */
+    width: 100%; /* Take up full width of parent */
+    padding: 5px;
+    color: black;
 }
 
-/* Lightbox script applies some styles, you might need to override them in your custom CSS */
-.lightboxOverlay {
-    background-color: white !important; /* Background color for overlay */
-}
-
-@media (max-width: 768px) {
+/* Responsive behavior can go here */
+@media (max-width: 700px) {
     .gallery {
-        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image a img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .caption {
+        font-size: smaller;
+        bottom: -20px; /* Adjust position for smaller view */
     }
 }
