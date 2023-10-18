@@ -1,74 +1,48 @@
-body {
-    background-image: url('your-background-image.jpg'); /* Replace with your actual image file */
-    background-size: cover;
-    font-family: 'Homemade Apple', cursive;
-    margin: 0;
-    padding: 0;
-}
-
-.gallery {
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.image {
-    margin: 10px;
-    position: relative; /* New: for caption positioning */
-    transform: rotate(0deg); /* Images start straight... */
-    transition: transform 0.2s; /* ... and rotate during hover */
-}
-
-.image:nth-child(odd) {
-    transform: rotate(-3deg); /* Odd images are tilted one way */
-}
-
-.image:nth-child(even) {
-    transform: rotate(3deg); /* Even images are tilted the other way */
-}
-
-.image:hover {
-    transform: rotate(0); /* Images straighten up on hover */
-}
-
-.image a img {
-    display: block;
-    width: 300px; /* Larger image size */
-    height: 300px; /* Maintain square aspect */
-    object-fit: cover; /* This will ensure your images cover the frame without distortion */
-    border-radius: 5px; /* Optional: for slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for more depth */
-    transition: box-shadow 0.2s; /* Smooth shadow transition */
-}
-
-.image:hover a img {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow grows on hover */
-}
-
-.caption {
-    font-family: 'Homemade Apple', cursive;
-    text-align: center;
-    position: absolute; /* Positioning within the image div */
-    bottom: -30px; /* Position under the image */
-    width: 100%; /* Take up full width of parent */
-    padding: 5px;
-    color: black;
-}
-
-/* Responsive behavior can go here */
-@media (max-width: 700px) {
-    .gallery {
-        padding: 10px;
-    }
-
-    .image a img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .caption {
-        font-size: smaller;
-        bottom: -20px; /* Adjust position for smaller view */
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles2.css">
+    <!-- Adding the font link here ensures it's loaded for your CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="gallery">
+    <!-- Image block 1 -->
+    <div class="image">
+        <a href="1stphoto.jpg" data-lightbox="gallery"> <!-- Make sure the file name is correct -->
+            <img src="1stphoto.jpg" alt="1stphoto"> <!-- Make sure the file name is correct -->
+            <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
+        </a>
+    </div>
+    <!-- Image block 2 -->
+    <div class="image">
+        <a href="iquitos.JPG" data-lightbox="gallery">
+            <img src="iquitos.JPG" alt="2ndphoto">
+            <div class="caption">Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins</div>
+        </a>
+    </div>
+    <!-- Image block 3 -->
+    <div class="image">
+        <a href="dolphins.JPG" data-lightbox="gallery">
+            <img src="dolphins.JPG" alt="3rdphoto">
+            <div class="caption">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
+        </a>
+    </div>
+    <!-- Image block 4 -->
+    <div class="image">
+        <a href="engaged.jpg" data-lightbox="gallery">
+            <img src="engaged.jpg" alt="4thphoto">
+            <div class="caption">On 4/20/2022 we got engaged!</div>
+        </a>
+    </div>
+    <!-- Additional image blocks can be added in the same manner -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<script src="script2.js"></script>
+</body>
+</html>
