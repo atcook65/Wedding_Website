@@ -10,8 +10,8 @@ body, h1, p, img {
 .background-image {
     background-image: url('pexels-photo-2516418.jpg');
     background-size: cover;
-    background-attachment: scroll; /* Adjusted from fixed to allow image to move during scroll */
-    height: 150vh; /* Increased height for more scrolling before revealing the next content */
+    background-attachment: scroll;
+    height: 150vh;
     position: relative;
 }
 
@@ -24,13 +24,12 @@ body, h1, p, img {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 70%; /* responsive width */
-    max-width: 500px; /* a limit on its expansiveness */
+    width: 70%;
+    max-width: 500px;
     border-radius: 10px;
-    font-size: 4vw; /* responsive font size */
+    font-size: 4vw;
     line-height: 1.5;
     z-index: 1;
-    /* Removed fixed aspect-ratio */
 }
 
 /* Style the image links with circular frames */
@@ -50,9 +49,9 @@ body, h1, p, img {
 .image-link img {
     border-radius: 50%;
     border: 3px solid rgba(255, 228, 196, 0.7);
-    width: 100%; /* Changed to be full width */
-    max-width: 150px; /* Added maximum width */
-    height: auto; /* Adjusted to maintain aspect ratio */
+    width: 150px; /* Fixed value to maintain consistency */
+    height: 150px; /* Make the height same as width to keep the circle shape */
+    object-fit: cover; /* Ensures the images cover the area without distortion */
 }
 
 /* Style the descriptions */
@@ -142,7 +141,8 @@ body {
     }
 
     .image-link img {
-        max-width: 100px; /* smaller image sizes */
+        width: 100px; /* Adjust size for smaller displays */
+        height: 100px; /* Adjust size for smaller displays */
     }
     /* other responsive styles can be combined here */
 }
