@@ -10,11 +10,10 @@ body, h1, p, img {
 .background-image {
     background-image: url('pexels-photo-2516418.jpg');
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
+    background-attachment: scroll; /* Adjusted from fixed to allow image to move during scroll */
+    height: 150vh; /* Increased height for more scrolling before revealing the next content */
     position: relative;
 }
-
 
 /* Style the rectangular shape for wedding details */
 .wedding-details {
@@ -25,23 +24,22 @@ body, h1, p, img {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 500px;
+    width: 70%; /* responsive width */
+    max-width: 500px; /* a limit on its expansiveness */
     border-radius: 10px;
-    font-size: 4vw;
-    aspect-ratio: 16/9;
+    font-size: 4vw; /* responsive font size */
     line-height: 1.5;
-    z-index: 1; 
+    z-index: 1;
+    /* Removed fixed aspect-ratio */
 }
-
 
 /* Style the image links with circular frames */
 .image-links {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    position: relative; /* add position relative */
-    z-index: 2; /* add z-index to make sure it appears in front of the shape */
+    position: relative;
+    z-index: 2;
 }
 
 .image-link {
@@ -52,8 +50,9 @@ body, h1, p, img {
 .image-link img {
     border-radius: 50%;
     border: 3px solid rgba(255, 228, 196, 0.7);
-    width: 150px;
-    height: 150px;
+    width: 100%; /* Changed to be full width */
+    max-width: 150px; /* Added maximum width */
+    height: auto; /* Adjusted to maintain aspect ratio */
 }
 
 /* Style the descriptions */
@@ -66,8 +65,8 @@ body, h1, p, img {
 .language-switch {
     text-align: center;
     margin: 10px;
-    position: relative; /* add position relative */
-    z-index: 2; /* add z-index to make sure it appears in front of the shape */
+    position: relative;
+    z-index: 2;
 }
 
 .language-switch button {
@@ -78,83 +77,80 @@ body, h1, p, img {
     margin: 0 10px;
 }
 
-        /* Define styles for the sections */
-        body {
-            text-align: center;
-        }
-
-        .section {
-            margin: 20px 0;
-        }
-
-        /* Style for the title section */
-        .title {
-            font-size: 72px;
-            font-family: 'Alex Brush', cursive;
-        }
-
-        /* Style for the date and location sections */
-        .date-location {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-            font-family: 'Garamond', serif;
-        }
-
-        .date {
-            font-weight: bold;
-        }
-
-        .separator {
-            border-right: 2px solid #000;
-            margin: 0 20px;
-            height: 100px;
-        }
-
-        .location {
-            font-weight: bold;
-        }
-
-        /* Style for the event sections */
-        .event {
-            font-size: 36px;
-            font-weight: bold;
-            font-family: 'Garamond', serif;
-        }
-
-        .event-details {
-            font-size: 24px;
-            font-family: 'Garamond', serif;
-        }
-
-        /* Style for the horizontal line */
-        .divider {
-            border-top: 2px solid #000;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-
-
-@media screen and (max-width: 768px) {
-  .wedding-details {
-    width: 90vw;
-    height: auto;
-  }
+/* Define styles for the sections */
+body {
+    text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-  .wedding-details {
-    font-size: 16px;
-    line-height: 1.5;
-  }
+.section {
+    margin: 20px 0;
 }
 
+/* Style for the title section */
+.title {
+    font-size: 72px;
+    font-family: 'Alex Brush', cursive;
+}
 
-<TextView
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:text="@string/lorem_ipsum"
-  android:textSize="16sp"
-  android:lineSpacingExtra="8dp" />
+/* Style for the date and location sections */
+.date-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-family: 'Garamond', serif;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.separator {
+    border-right: 2px solid #000;
+    margin: 0 20px;
+    height: 100px;
+}
+
+.location {
+    font-weight: bold;
+}
+
+/* Style for the event sections */
+.event {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Garamond', serif;
+}
+
+.event-details {
+    font-size: 24px;
+    font-family: 'Garamond', serif;
+}
+
+/* Style for the horizontal line */
+.divider {
+    border-top: 2px solid #000;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .wedding-details {
+        width: 90%;
+        font-size: 4vw;
+    }
+
+    .image-link img {
+        max-width: 100px; /* smaller image sizes */
+    }
+    /* other responsive styles can be combined here */
+}
+
+/* Additional media queries for other screen sizes */
+@media screen and (min-width: 1366px) {
+    .wedding-details {
+        /* styles for larger screens, adjust as necessary */
+    }
+    /* Add adjustments for other elements on larger screens */
+}
