@@ -10,8 +10,8 @@ body, h1, p, img {
 .background-image {
     background-image: url('pexels-photo-2516418.jpg');
     background-size: cover;
-    background-attachment: scroll;
-    height: 150vh;
+    background-attachment: scroll; /* Adjusted from fixed to allow image to move during scroll */
+    height: 150vh; /* Increased height for more scrolling before revealing the next content */
     position: relative;
 }
 
@@ -24,12 +24,13 @@ body, h1, p, img {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 500px;
+    width: 70%; /* responsive width */
+    max-width: 500px; /* a limit on its expansiveness */
     border-radius: 10px;
-    font-size: 4vw;
+    font-size: 4vw; /* responsive font size */
     line-height: 1.5;
     z-index: 1;
+    /* Removed fixed aspect-ratio */
 }
 
 /* Style the image links with circular frames */
@@ -39,19 +40,27 @@ body, h1, p, img {
     margin-top: 50px;
     position: relative;
     z-index: 2;
+    flex-wrap: wrap; /* Allow wrapping if there isn't enough room for all items */
 }
 
 .image-link {
     text-align: center;
     margin: 0 20px;
+    width: 150px; /* consistent size for circular images */
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-link img {
     border-radius: 50%;
     border: 3px solid rgba(255, 228, 196, 0.7);
-    width: 150px; /* Fixed value to maintain consistency */
-    height: 150px; /* Make the height same as width to keep the circle shape */
-    object-fit: cover; /* Ensures the images cover the area without distortion */
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%; /* Full width for consistent circle shape */
+    height: 100%; /* Full height for consistent circle shape */
+    object-fit: cover; /* Maintain aspect ratio of images without cropping */
 }
 
 /* Style the descriptions */
@@ -123,7 +132,7 @@ body {
 
 .event-details {
     font-size: 24px;
-    font-family: 'Garamond', serif;
+    font-family: 'Garamond', serif.
 }
 
 /* Style for the horizontal line */
@@ -140,9 +149,14 @@ body {
         font-size: 4vw;
     }
 
+    .image-link {
+        width: 100px; /* smaller circle sizes for smaller screens */
+        height: 100px;
+    }
+
     .image-link img {
-        width: 100px; /* Adjust size for smaller displays */
-        height: 100px; /* Adjust size for smaller displays */
+        max-width: 100%;
+        max-height: 100%;
     }
     /* other responsive styles can be combined here */
 }
