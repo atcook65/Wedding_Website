@@ -4,61 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Ensure this points to your actual CSS file -->
-    <!-- Fonts -->
+    <link rel="stylesheet" href="styles2.css">
+    <!-- Adding the font link here ensures it's loaded for your CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
-    <!-- Lightbox -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="gallery">
-    <!-- Image 1 -->
+    <!-- Image block 1 -->
     <div class="image">
-        <a href="1stphoto.jpg" data-lightbox="gallery" data-title="We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami">
-            <img src="1stphoto.jpg" alt="1stphoto">
+        <a href="1stphoto.jpg" data-lightbox="gallery"> <!-- Make sure the file name is correct -->
+            <img src="1stphoto.jpg" alt="1stphoto"> <!-- Make sure the file name is correct -->
+            <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
         </a>
-        <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
     </div>
-
-    <!-- Image 2 -->
+    <!-- Image block 2 -->
     <div class="image">
-        <a href="iquitos.JPG" data-lightbox="gallery" data-title="Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins">
-            <img src="iquitos.JPG" alt="Iquitos">
+        <a href="iquitos.JPG" data-lightbox="gallery">
+            <img src="iquitos.JPG" alt="2ndphoto">
+            <div class="caption">Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins</div>
         </a>
-        <div class="caption">Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins</div>
     </div>
-
-    <!-- Image 3 -->
+    <!-- Image block 3 -->
     <div class="image">
-        <a href="dolphins.JPG" data-lightbox="gallery" data-title="Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills">
-            <img src="dolphins.JPG" alt="Dolphins">
+        <a href="dolphins.JPG" data-lightbox="gallery">
+            <img src="dolphins.JPG" alt="3rdphoto">
+            <div class="caption">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
         </a>
-        <div class="caption">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
     </div>
-
-    <!-- Image 4 -->
+    <!-- Image block 4 -->
     <div class="image">
-        <a href="engaged.jpg" data-lightbox="gallery" data-title="On 4/20/2022 we got engaged!">
-            <img src="engaged.jpg" alt="Engaged">
+        <a href="engaged.jpg" data-lightbox="gallery">
+            <img src="engaged.jpg" alt="4thphoto">
+            <div class="caption">On 4/20/2022 we got engaged!</div>
         </a>
-        <div class="caption">On 4/20/2022 we got engaged!</div>
     </div>
-
-    <!-- You can continue to add more images following the same format above -->
+    <!-- Additional image blocks can be added in the same manner -->
 </div>
-
-<!-- Lightbox functionality -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-<script>
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true
-    })
-</script>
+<script src="script2.js"></script>
 </body>
 </html>
-
-
-
