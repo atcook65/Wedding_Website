@@ -56,10 +56,8 @@ body, h1, p, img {
     border-radius: 50%;
     border: 3px solid rgba(255, 228, 196, 0.7);
     /* Use max values to ensure images are responsive and maintain aspect ratio */
-    max-width: 100%; /* makes sure the image doesn’t exceed its container */
-    height: auto; /* auto to maintain the aspect ratio */
-    object-fit: cover; /* cover to make sure the image covers all area */
-    flex-shrink: 0; /* prevent flex items from shrinking */
+    width: 150px;
+    height: 150px;
 }
 
 /* Style the descriptions */
