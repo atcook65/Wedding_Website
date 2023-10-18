@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrolling Polaroid Timeline</title>
-    <link rel="stylesheet" href="styles2.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+<link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <div class="background-image"></div>
-    <div class="timeline">
-        <div class="event">
-            <div class="polaroid">
-                <img src="1stphoto .jpg" alt="Image 1" class="enlarge">
-                <div class="description">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami. </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="polaroid">
-                <img src="iquitos.JPG" alt="Image 2" class="enlarge">
-                <div class="description">Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins. </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="polaroid">
-                <img src="dolphins.JPG" alt="Image 3" class="enlarge">
-                <div class="description">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
-            </div>
-        <div>
-        <div class="event">
-            <div class="polaroid">
-                <img src="engaged.jpg" alt="Image 4" class="enlarge">
-                <div class="description">On 4/20/2022 we got engaged! </div>
-            </div>
-        <!-- Add more events here -->
-    </div>
-    <div class="enlarged-image-container">
-        <div class="enlarged-image-content">
-            <span class="close-button" onclick="closeEnlargedImage()">&times;</span>
-            <img src="" alt="Enlarged Image" class="enlarged-image">
-        </div>
-    </div>
-    <script src="script2.js"></script>
+<div class="gallery">
+  <!-- Repeat this block for each image -->
+  <div class="image">
+    <a href="1stphoto .jpg" data-lightbox="gallery">
+      <img src="1stphoto .jpg" alt="1stphoto">
+      <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
+    </a>
+  </div>
+  <!-- End of image block -->
+ <!-- Repeat this block for each image -->
+  <div class="image">
+    <a href="iquitos.JPG" data-lightbox="gallery">
+      <img src="iquitos.JPG" alt="2ndphoto">
+      <div class="caption">Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins</div>
+    </a>
+  </div>
+  <!-- End of image block -->
+
+<!-- Repeat this block for each image -->
+  <div class="image">
+    <a href="dolphins.JPG" data-lightbox="gallery">
+      <img src="dolphins.JPG" alt="2ndphoto">
+      <div class="caption">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
+    </a>
+  </div>
+  <!-- End of image block -->
+    <!-- Repeat this block for each image -->
+  <div class="image">
+    <a href="engaged.jpg" data-lightbox="gallery">
+      <img src="engaged.jpg" alt="2ndphoto">
+      <div class="caption">On 4/20/2022 we got engaged!</div>
+    </a>
+  </div>
+  <!-- End of image block -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<script src="script2.js"></script>
 </body>
 </html>
-
 
