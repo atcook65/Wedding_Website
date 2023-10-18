@@ -1,7 +1,7 @@
 body {
-    background-image: url('il_1140xN.2285826726_el9k.jpg'); /* Make sure this path and filename is correct and the image is in the right folder */
+    background-image: url('il_1140xN.2285826726_el9k.jpg');
     background-size: cover;
-    font-family: 'Permanent Marker', cursive; /* General text on the page will use this font */
+    font-family: 'Permanent Marker', cursive;
 }
 
 .gallery {
@@ -16,35 +16,40 @@ body {
     background-color: #fff;
     margin: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    width: 250px; /* Adjust based on your preference */
-}
-
-.image:hover {
-    transform: scale(1.1);
-}
-
-.image:nth-child(odd) {
-    transform: rotate(-7deg); /* Rotate in one direction for odd-numbered images */
-}
-
-.image:nth-child(even) {
-    transform: rotate(5deg); /* Rotate in another direction for even-numbered images */
+    width: 200px; /* Adjusting to make images square */
+    height: 200px; /* Same as above */
+    overflow: hidden; /* So that images don't overflow the div */
+    position: relative; /* To position the caption within the div */
+    text-decoration: none; /* Remove underline from captions */
 }
 
 .image img {
     width: 100%;
-    border-bottom: 1px solid #ccc;
+    display: block; /* Remove space below images */
+    transition: transform 0.2s; /* Smooth transformation */
 }
 
-
-
+.image:hover img {
+    transform: scale(1.1);
+}
 
 .caption {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     font-size: 18px;
-    font-family: 'Homemade Apple', cursive; /* This font will be applied to the captions */
+    font-family: 'Homemade Apple', cursive;
+    position: absolute; /* Position at the bottom of image div */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: black; /* Make text color black */
+    background: rgba(255, 255, 255, 0.7); /* Slight white overlay for readability */
+    text-decoration: none; /* Ensure no underline */
+}
+
+/* Lightbox script applies some styles, you might need to override them in your custom CSS */
+.lightboxOverlay {
+    background-color: white !important; /* Background color for overlay */
 }
 
 @media (max-width: 768px) {
