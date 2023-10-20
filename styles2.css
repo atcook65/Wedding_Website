@@ -1,7 +1,7 @@
 body {
     background-image: url('il_1140xN.2285826726_el9k.jpg');
     background-size: cover;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Homemade Apple', cursive;
     margin: 0;
     overflow: hidden;
 }
@@ -21,6 +21,7 @@ body {
     width: 250px;
     cursor: pointer;
     transition: transform 0.2s;
+    position: relative; /* Added position relative to the image div */
 }
 
 .image:hover {
