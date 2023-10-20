@@ -14,34 +14,54 @@
 <div class="gallery">
     <!-- Image block 1 -->
     <div class="image">
-        <a href="1stphoto.jpg" data-lightbox="gallery"> <!-- Make sure the file name is correct -->
-            <img src="1stphoto.jpg" alt="1stphoto"> <!-- Make sure the file name is correct -->
-            <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
-        </a>
+        <img src="1stphoto.jpg" alt="1stphoto" onclick="openModal('1stphoto.jpg')">
+        <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
     </div>
     <!-- Image block 2 -->
     <div class="image">
-        <a href="iquitos.JPG" data-lightbox="gallery">
-            <img src="iquitos.JPG" alt="2ndphoto">
-            <div class="caption">Our first trip to Peru. We first visited Iquitos so Ashley could see the pink dolphins</div>
-        </a>
+        <img src="iquitos.JPG" alt="2ndphoto" onclick="openModal('iquitos.JPG')">
+        <div class="caption">11/2019-Our first trip to Peru. We visited Iquitos to see the pink dolphins</div>
     </div>
     <!-- Image block 3 -->
     <div class="image">
-        <a href="dolphins.JPG" data-lightbox="gallery">
-            <img src="dolphins.JPG" alt="3rdphoto">
-            <div class="caption">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
-        </a>
+        <img src="dolphins.JPG" alt="3rdphoto" onclick="openModal('dolphins.JPG')">
+        <div class="caption">Ricardo quickly improved his swimming skills since Ashley is a marine scientist.</div>
     </div>
-    <!-- Image block 4 -->
+   <!-- Image block 4-->
     <div class="image">
-        <a href="engaged.jpg" data-lightbox="gallery">
-            <img src="engaged.jpg" alt="4thphoto">
-            <div class="caption">On 4/20/2022 we got engaged!</div>
-        </a>
+        <img src="miami.JPG" alt="4thphoto" onclick="openModal('miami.JPG')">
+        <div class="caption">Sometimes we do Florida activities.</div>
+    </div>
+    <!-- Image block 5 -->
+        <div class="image">
+        <img src="engaged.jpg" alt="4thphoto" onclick="openModal('engaged.jpg')">
+        <div class="caption">On 4/20/2023 we got engaged!</div>
     </div>
     <!-- Additional image blocks can be added in the same manner -->
 </div>
+
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="">
+    </div>
+</div>
+
+<script>
+function openModal(imageSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+}
+
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 <script src="script2.js"></script>
 </body>
