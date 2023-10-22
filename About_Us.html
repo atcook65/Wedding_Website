@@ -40,38 +40,47 @@
     <!-- Additional image blocks can be added in the same manner -->
 </div>
 
-<!-- Modal -->
+<!-- Modal - the 'onclick' attribute has been removed from the close button. -->
 <div class="modal" id="myModal">
-    <!-- Added padding to the span for a larger clickable area -->
-    <span class="close" onclick="closeModal()" style="padding: 10px;">&times;</span>
+    <span class="close">&times;</span>
     <div class="modal-content">
         <img id="modalImage" src="" alt="">
     </div>
 </div>
 
 <script>
-function openModal(imageSrc) {
+// Using 'DOMContentLoaded' event to ensure all HTML is loaded before executing.
+document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("modalImage");
-    modal.style.display = "block";
-    modalImg.src = imageSrc;
-}
+    var images = document.querySelectorAll('.gallery .image img');
 
-function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
+    // Adding event listeners to all gallery images.
+    images.forEach(function(image) {
+        image.addEventListener('click', function(event) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
 
-// New: Close the modal if someone clicks outside the modal content
-window.onclick = function(event) {
-    var modal = document.getElementById("myModal");
-    if (event.target === modal) {
+    // Event listener for closing the modal.
+    var span = document.querySelector(".close"); // Getting the first (and should be the only) close element.
+    span.addEventListener('click', function() {
         modal.style.display = "none";
-    }
-}
+    });
+
+    // Close modal if outside click is detected.
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-<script src="script2.js"></script>
+<!-- Removing these scripts to avoid potential conflicts with the above JavaScript logic. -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script> -->
+<!-- <script src="script2.js"></script> -->
+
 </body>
 </html>
