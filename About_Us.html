@@ -40,13 +40,14 @@
     <!-- Additional image blocks can be added in the same manner -->
 </div>
 
-<!-- Modal - the 'onclick' attribute has been removed from the close button. -->
+<!-- Modal section in your HTML file -->
 <div class="modal" id="myModal">
-    <span class="close">&times;</span>
+    <span class="close" title="Close Modal">&times;</span> <!-- Added a title for accessibility -->
     <div class="modal-content">
         <img id="modalImage" src="" alt="">
     </div>
 </div>
+
 
 <script>
 // Using 'DOMContentLoaded' event to ensure all HTML is loaded before executing.
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 </script>
 
 <!-- Removing these scripts to avoid potential conflicts with the above JavaScript logic. -->
