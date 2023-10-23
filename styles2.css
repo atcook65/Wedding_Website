@@ -41,6 +41,13 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
+.caption {
+    text-align: center; /* Centers the text */
+    padding: 10px; /* Optional: for some space around the text */
+    color: #333; /* Optional: any color you prefer */
+}
+
+
 /* Create a modal for larger images */
 .modal {
     display: none;
