@@ -9,59 +9,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script>
+        function changeLanguage() {
+            var currentLang = document.getElementById('language').value;
+            var translateFile = currentLang === 'en' ? 'en2.json' : 'es2.json';
+            fetch(translateFile)
+                .then(response => response.json())
+                .then(data => {
+                    var elements = document.querySelectorAll('[data-translate]');
+                    elements.forEach(el => {
+                        var key = el.getAttribute('data-translate');
+                        if (data[key]) {
+                            el.textContent = data[key];
+                        }
+                    });
+                })
+                .catch(err => console.error('Failed to translate:', err));
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            changeLanguage();
+        });
+    </script>
+    
 </head>
 <body>
+
+<select id="language" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="es">Spanish</option>
+</select>
+    
+<div class="gallery">
 <div class="gallery">
     <!-- Image block 1 -->
     <div class="image">
         <img src="1stphoto.jpg" alt="1stphoto" onclick="openModal('1stphoto.jpg')">
-        <div class="caption">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
+        <div class="caption" data-translate="caption1">We met on the dating app 'Bumble'. Our first date was on 4/20/2019 in Wynwood, Miami</div>
     </div>
+
     <!-- Image block 2 -->
     <div class="image">
         <img src="iquitos.JPG" alt="2ndphoto" onclick="openModal('iquitos.JPG')">
-        <div class="caption"> 11/2019-Our first trip to Peru! We visited Iquitos so Ashley could see the pink dolphins</div>
+        <div class="caption" data-translate="caption2">11/2019-Our first trip to Peru! We visited Iquitos so Ashley could see the pink dolphins</div>
     </div>
-    <!-- Image block 2 -->
-    <div class="image">
-        <img src="AR_llama.JPEG" alt="2ndphoto" onclick="openModal('AR_llama.JPEG')">
-        <div class="caption">We also went to Cusco, and saw many llamas</div>
-    </div>
+
     <!-- Image block 3 -->
     <div class="image">
-        <img src="dolphins.JPG" alt="3rdphoto" onclick="openModal('dolphins.JPG')">
-        <div class="caption">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
+        <img src="AR_llama.JPEG" alt="3rdphoto" onclick="openModal('AR_llama.JPEG')">
+        <div class="caption" data-translate="caption3">We also went to Cusco, and saw many llamas</div>
     </div>
-     <!-- Image block 3 -->
+
+        <!-- Image block 4 -->
     <div class="image">
-        <img src="baby_peluchin.JPG" alt="3rdphoto" onclick="openModal('baby_peluchin.JPG')">
-        <div class="caption">In 2020 we got a a dog and named him ultimate Peluchin...</div>
+        <img src="dolphins.JPG" alt="4thphoto" onclick="openModal('dolphins.JPG')">
+        <div class="caption" data-translate="caption4">Since Ashley is a marine scientist, Ricardo quickly improved his swimming skills</div>
     </div>
+
+    <!-- Image block 5 -->
+    <div class="image">
+        <img src="baby_peluchin.JPG" alt="5thphoto" onclick="openModal('baby_peluchin.JPG')">
+        <div class="caption" data-translate="caption5">In 2020 we got a dog and named him Peluchin</div>
+    </div>
+
     <!-- Image block 6 -->
     <div class="image">
         <img src="IMG-0608.jpg" alt="6thphoto" onclick="openModal('IMG-0608.jpg')">
-        <div class="caption">Ricardo has had several Peluchins before but this is the best one</div>
+        <div class="caption" data-translate="caption6">Ricardo has had several Peluchins before, but this is the best one</div>
     </div>
-    <!-- Image block 4-->
+
+    <!-- Image block 7 -->
     <div class="image">
-        <img src="miami.JPG" alt="4thphoto" onclick="openModal('miami.JPG')">
-        <div class="caption">Sometimes we do Florida activities...</div>
+        <img src="miami.JPG" alt="7thphoto" onclick="openModal('miami.JPG')">
+        <div class="caption" data-translate="caption7">Sometimes we do Florida activities</div>
     </div>
-    <!-- Image block 5 -->
+
+    <!-- Image block 8 -->
     <div class="image">
-        <img src="keys.JPG" alt="5thphoto" onclick="openModal('keys.JPG')">
-        <div class="caption">like visiting the Keys...</div>
+        <img src="keys.JPG" alt="8thphoto" onclick="openModal('keys.JPG')">
+        <div class="caption" data-translate="caption8">like visiting the Keys</div>
     </div>
-    <!-- Image block 6 -->
+
+    <!-- Image block 9 -->
     <div class="image">
-        <img src="boat.jpg" alt="6thphoto" onclick="openModal('boat.jpg')">
-        <div class="caption">and going on boats</div>
+        <img src="boat.jpg" alt="9thphoto" onclick="openModal('boat.jpg')">
+        <div class="caption" data-translate="caption9">and going on boats</div>
     </div>
-    <!-- Image block 12 -->
+       <!-- Image block 12 -->
     <div class="image">
-        <img src="engaged.jpg" alt="10thphoto" onclick="openModal('engaged.jpg')">
-        <div class="caption">On 4/20/2022 we got engaged!</div>
+        <img src="engaged.jpg" alt="12thphoto" onclick="openModal('engaged.jpg')">
+        <div class="caption" data-translate="caption12">On 4/20/2022 we got engaged!</div>
     </div>
+</div>
+
     <!-- Additional image blocks can be added in the same manner -->
 </div>
 
