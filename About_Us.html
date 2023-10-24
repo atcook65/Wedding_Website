@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
     <script>
-        function changeLanguage() {
-            var currentLang = document.getElementById('language').value;
-            var translateFile = currentLang === 'en' ? 'en2.json' : 'es2.json';
+        function changeLanguage(lang) {
+            var translateFile = lang === 'en' ? 'en2.json' : 'es2.json';
             fetch(translateFile)
                 .then(response => response.json())
                 .then(data => {
@@ -34,10 +34,11 @@
 </head>
 <body>
 
-<select id="language" onchange="changeLanguage()">
-    <option value="en">English</option>
-    <option value="es">Spanish</option>
-</select>
+<div class="language-switch">
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('es')">Español</button>
+</div>
+
     
 <div class="gallery">
 <div class="gallery">
