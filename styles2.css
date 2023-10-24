@@ -47,6 +47,14 @@ body {
     color: #333; /* Optional: any color you prefer */
 }
 
+/* Style the language switch button */
+.language-switch {
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+}
+
 
 /* Create a modal for larger images */
 .modal {
