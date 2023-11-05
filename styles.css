@@ -65,6 +65,14 @@ body, h1, p, img {
 .image-link p {
     margin-top: 10px;
     font-weight: bold;
+    color: black;         /* Ensure text is black */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Add this to target the links directly if they are wrapped within an <a> tag */
+.image-link a, .image-link a:visited {
+    color: black; /* Sets link color to black */
+    text-decoration: none; /* Removes underline */
 }
 
 /* Style the language switch button */
