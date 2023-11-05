@@ -23,7 +23,7 @@ function translatePage() {
             document.getElementById('HOTEL').innerHTML = data.HOTEL;
             document.getElementById('WEDDING_DAY').innerHTML = data.WEDDING_DAY;
             document.getElementById('PERU').innerHTML = data.PERU;
-            document.getElementById('CUSCO').innerHTML = data.CUSCO;
+            document.getElementById('RSVP').innerHTML = data.RSVP;
             document.getElementById('ABOUT_US').innerHTML = data.ABOUT_US;
             // Add more elements as needed
         });
