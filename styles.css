@@ -97,8 +97,9 @@ body {
     text-align: center; /* Center the text horizontally */
     margin: 20px 0; /* Add some space above and below the text */
     font-size: 24px; /* Set the font size or make it responsive if needed */
-    /* Add any additional styling such as font family, color, etc. */
+    color: black; /* Set the text color to black */
 }
+
 
 
 /* Style for the title section */
