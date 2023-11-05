@@ -4,32 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RSVP - Our Wedding</title>
-<!-- Add link to your CSS file -->
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>RSVP to Our Wedding</h1>
-  <form action="process-rsvp.php" method="POST">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" required>
+<div class="rsvp-container">
+  <h1>RSVP to Our Special Day</h1>
+  <p>We can't wait to celebrate with you! Please fill in your details below to RSVP.</p>
+  <form action="process-rsvp.php" method="post">
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
     
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" required>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
     
-    <label for="attendance">Will you be attending?</label>
-    <select id="attendance" name="attendance" required>
-      <option value="Yes">Yes, I will be there!</option>
-      <option value="No">Sorry, I can't make it.</option>
-      <option value="Maybe">Maybe, I'm not sure yet.</option>
-    </select>
+    <div class="form-group">
+      <label for="attendance">Will you be attending?</label>
+      <select id="attendance" name="attendance" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="Yes">Absolutely, I wouldn't miss it for the world!</option>
+        <option value="No">Regretfully, I will not be able to attend.</option>
+        <option value="Maybe">I'm not sure yet, will confirm later.</option>
+      </select>
+    </div>
     
-    <label for="guests">Number of Guests:</label>
-    <input type="number" id="guests" name="guests" min="1" max="5" required>
+    <div class="form-group">
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="0" max="5">
+    </div>
     
-    <label for="message">Message (optional):</label>
-    <textarea id="message" name="message"></textarea>
+    <div class="form-group">
+      <label for="message">Additional Message (Optional):</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
     
-    <button type="submit">Submit RSVP</button>
+    <button type="submit" class="rsvp-button">Submit RSVP</button>
   </form>
+</div>
 </body>
 </html>
