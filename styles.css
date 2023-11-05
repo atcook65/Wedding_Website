@@ -33,12 +33,6 @@ body, h1, p, img {
     z-index: 1;
 }
 
-/* Style the text above the image links with circular frames */
-.text-above-image-links {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px; /* Space between text and images */
-}
 
 /* Style the image links with circular frames */
 .image-links {
