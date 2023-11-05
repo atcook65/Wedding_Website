@@ -117,10 +117,11 @@
 <script>
 // Using 'DOMContentLoaded' event to ensure all HTML is loaded before executing.
 document.addEventListener('DOMContentLoaded', function () {
+    changeLanguage('en'); // Set English as the default language.
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("modalImage");
     var images = document.querySelectorAll('.gallery .image img');
-
+    
     // Adding event listeners to all gallery images.
     images.forEach(function(image) {
         image.addEventListener('click', function(event) {
