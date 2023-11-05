@@ -18,8 +18,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                'X-Mailer: PHP/' . phpversion();
 
     mail($to, $subject, $content, $headers);
-    
-    // Redirect to a new page or display a message
-    echo 'Thank you for your RSVP!';
+
+// Simple validation example
+if (empty($name) || empty($email) || empty($attendance) || empty($guests)) {
+    // Handle the error - you should redirect or inform the user
+    die('Please fill in all required fields.');
+}
+
+// Send the email and check if it was successful
+if (!mail($to, $subject, $content, $headers)) {
+    // Handle the error - mail function failed to send the email
+    die('Unable to send RSVP. Please try again later.');
+}
+
+// If mail was successful, redirect or inform the user
+echo 'Thank you for your RSVP!';
+
 }
 ?>
