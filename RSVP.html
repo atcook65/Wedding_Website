@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RSVP - Our Wedding</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP to Our Special Day</title>
+    <link rel="stylesheet" href="styleRSVP.css">
 </head>
 <body>
-<div class="rsvp-container">
-  <h1>RSVP to Our Special Day</h1>
-  <p>We can't wait to celebrate with you! Please fill in your details below to RSVP.</p>
-  <form action="process-rsvp.php" method="post">
-    <div class="form-group">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required>
+    <div class="rsvp-container">
+        <h1>RSVP to Our Special Day</h1>
+        <p>We can't wait to celebrate with you!</p>
+        <p>Please fill in your details below to RSVP.</p>
+        <form id="rsvpForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="emailAddress">Email Address:</label>
+                <input type="email" id="emailAddress" name="emailAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="attendance">Will you be attending?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Absolutely, I wouldn't miss it for the world!</option>
+                    <option value="No">Regretfully, I will not be able to attend.</option>
+                    <option value="Maybe">I'm not sure yet, will confirm later.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" required min="0">
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Message (Optional):</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="photo-section">
+                <img src="path-to-your-engagement-photo.jpg" alt="Engagement Photo" class="engagement-photo">
+            </div>
+            <button type="submit">Submit RSVP</button>
+        </form>
     </div>
-    
-    <div class="form-group">
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    
-    <div class="form-group">
-      <label for="attendance">Will you be attending?</label>
-      <select id="attendance" name="attendance" required>
-        <option value="" disabled selected>Select an option</option>
-        <option value="Yes">Absolutely, I wouldn't miss it for the world!</option>
-        <option value="No">Regretfully, I will not be able to attend.</option>
-        <option value="Maybe">I'm not sure yet, will confirm later.</option>
-      </select>
-    </div>
-    
-    <div class="form-group">
-      <label for="guests">Number of Guests:</label>
-      <input type="number" id="guests" name="guests" min="0" max="5">
-    </div>
-    
-    <div class="form-group">
-      <label for="message">Additional Message (Optional):</label>
-      <textarea id="message" name="message"></textarea>
-    </div>
-    
-    <button type="submit" class="rsvp-button">Submit RSVP</button>
-  </form>
-</div>
 </body>
 </html>
