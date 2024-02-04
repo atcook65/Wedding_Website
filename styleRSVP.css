@@ -1,0 +1,49 @@
+body {
+    background-color: rgba(255, 228, 196, 0.7);
+}
+
+.rsvp-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white; /* Light background for the form for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+p, .form-group label {
+    margin: 10px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+button {
+    background-color: #4CAF50; /* A nice green */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.engagement-photo {
+    width: 100%;
+    max-width: 400px; /* Adjust based on your preference */
+    margin-top: 20px;
+}
