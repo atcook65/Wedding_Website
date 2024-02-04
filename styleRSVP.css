@@ -25,17 +25,20 @@ p, .form-group label {
 }
 
 input, select, textarea, button {
-    width: 100%;
+    width: auto; /* Change from 100% to auto for buttons, adjust for input/select/textarea if needed */
     padding: 10px;
     margin-top: 5px;
     box-sizing: border-box; /* Ensures padding does not affect width */
 }
 
 button {
-    background-color: #4CAF50; /* A nice green */
-    color: white;
+    background-color: #000; /* Changed to black */
+    color: #FFF; /* Text color changed to white */
     border: none;
     cursor: pointer;
+    padding: 5px 20px; /* Adjust padding to make buttons smaller */
+    font-size: 0.9rem; /* Adjust font size as desired */
+    margin: 0 10px; /* Add some space around buttons */
 }
 
 button:hover {
