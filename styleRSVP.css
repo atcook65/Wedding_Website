@@ -25,14 +25,14 @@ p, .form-group label {
 }
 
 input, select, textarea, button {
-    width: auto; /* Change from 100% to auto for buttons, adjust for input/select/textarea if needed */
+    width: auto; /* Adjusted to auto for a better control over the elements */
     padding: 10px;
     margin-top: 5px;
     box-sizing: border-box; /* Ensures padding does not affect width */
 }
 
 button {
-    background-color: #000; /* Changed to black */
+    background-color: #000; /* Background color changed to black */
     color: #FFF; /* Text color changed to white */
     border: none;
     cursor: pointer;
@@ -51,12 +51,9 @@ button:hover {
     margin-top: 20px;
 }
 
+/* Flexbox styling for centering the language switch buttons */
 .language-switcher {
-    text-align: center; /* Center align the content */
-    margin-bottom: 20px; /* Optional: add some space below the switcher */
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    margin-bottom: 20px; /* Adds some space below the switcher */
 }
-
-.language-switcher button {
-    margin: 0 5px; /* Optional: ensure buttons have space between them */
-}
-
