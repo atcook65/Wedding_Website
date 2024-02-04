@@ -1,16 +1,13 @@
-let currentLang = 'en'; // Default language
-
 function switchLanguage(lang) {
-    currentLang = lang;
-    const script = document.createElement('script');
-    script.src = `${lang}3.js`; // Load the appropriate language file
-    document.head.appendChild(script);
-    script.onload = () => {
-        updateTexts();
-    };
+    fetch(`${lang}3.json`)
+    .then(response => response.json())
+    .then(data => {
+        updateTexts(data);
+    })
+    .catch(error => console.error('Error loading the translation file:', error));
 }
 
-function updateTexts() {
+function updateTexts(texts) {
     document.getElementById('pageTitle').textContent = texts.pageTitle;
     document.getElementById('rsvpHeader').textContent = texts.rsvpHeader;
     document.getElementById('celebrateWithUs').textContent = texts.celebrateWithUs;
@@ -27,6 +24,3 @@ function updateTexts() {
     document.getElementById('submitBtn').textContent = texts.submitBtn;
     // Add more elements as needed
 }
-
-// Initially load the default language
-switchLanguage(currentLang);
