@@ -21,7 +21,7 @@ body, html {
 /* Parallax background */
 .parallax {
     /* Insert your background image URL here */
-    background-image: url('pexels_areqipua.jpg');
+    background-image: url('cusco_background.jpg');
     height: 150vh; /* Increased height for more scrolling */
     background-attachment: fixed; /* Ensures the image stays fixed while content scrolls */
     background-position: center;
@@ -41,7 +41,7 @@ body, html {
     text-align: center;
     padding: 20px;
     font-family: 'Garamond', serif;
-    color: white;
+    color: black;
     min-height: 150vh; /* Ensure content height matches parallax height */
 }
 
@@ -49,7 +49,7 @@ body, html {
 h1 {
     font-size: 3em;
     margin-top: 0;
-    color: white;
+    color: black;
     font-family: 'Alex Brush', cursive; /* Use the Alex Brush font */
 }
 
@@ -57,7 +57,7 @@ h1 {
 p {
     font-size: 1em;
     margin-top: 0;
-    color: white;
+    color: black;
 }
 
 /* Itinerary container */
@@ -72,8 +72,8 @@ p {
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
     margin: 20px 0;
-    color: white;
-    background: rgba(0, 0, 0, 0.5); /* Sheer black background for readability */
+    color: black;
+    background: rgba(255, 255, 255, 0.7); /* Sheer white background for readability */
     padding: 10px;
     border-radius: 5px;
 }
