@@ -15,6 +15,7 @@ body, html {
     height: 100%;
     font-family: 'Garamond', serif;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Parallax background */
@@ -26,7 +27,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -41,18 +42,22 @@ body, html {
     padding: 20px;
     font-family: 'Garamond', serif;
     color: white;
+    min-height: 150vh; /* Ensure content height matches parallax height */
 }
 
 /* Title styles */
 h1 {
     font-size: 3em;
     margin-top: 0;
+    color: white;
+    font-family: 'Alex Brush', cursive; /* Use the Alex Brush font */
 }
 
 /* Subtitle styles */
 p {
     font-size: 1em;
     margin-top: 0;
+    color: white;
 }
 
 /* Itinerary container */
