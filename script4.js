@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let scrollY = window.scrollY;
         events.forEach(event => {
             let eventOffsetTop = event.offsetTop;
-            if (scrollY + window.innerHeight > eventOffsetTop) {
+            if (scrollY + window.innerHeight > eventOffsetTop + event.offsetHeight / 2) {
                 event.classList.add("visible");
             }
         });
